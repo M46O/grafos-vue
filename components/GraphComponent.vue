@@ -1,15 +1,26 @@
 <template>
-  <div id="main" :style="{ width: '100%', height: '500px' }"></div>
+  <div>
+    <div id="main" :style="{ width: '100%', height: '500px' }"></div>
+    <p>Los valores del vector de las aristas es de: {{ Aristas }}</p>
+    <p>Los valores del vector de las Vertices es de: {{ Vertices }}</p>
+  </div>
 </template>
 
 <script>
 module.exports = {
   data() {
-    return {};
+    return {
+      Aristas: [],
+      Vertices: [],
+    };
   },
 
   mounted() {
     this.drawLine();
+    TextComponent = window.TextComponent;
+    window.GraphComponent = this;
+    this.Aristas = TextComponent.Aristas;
+    this.Vertices = TextComponent.Vertices;
   },
   methods: {
     drawLine() {
@@ -58,7 +69,7 @@ module.exports = {
             target: target,
           });
         }
-        
+
         myChart.setOption({
           series: [
             {

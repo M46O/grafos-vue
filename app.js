@@ -12,5 +12,6 @@ const app = new Vue({
     components: {
         'navbar-component': httpVueLoader('./components/NavbarComponent.vue'),
         'dashboard-component': httpVueLoader('./components/DashboardComponent.vue'),
+        'vectorinsert-componen': httpVueLoader('./components/VectorInsertComponent.vue'),
     },
 });
