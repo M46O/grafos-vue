@@ -5,7 +5,9 @@
 <script>
 module.exports = {
   data() {
-    return {};
+    return {
+      prueba: 1
+    };
   },
 
   mounted() {
