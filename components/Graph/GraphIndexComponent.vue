@@ -73,8 +73,8 @@ module.exports = {
         value: null,
       },
       searchForm: {
-        edgeA: 'H9',
-        edgeB: 'F7',
+        edgeA: null,
+        edgeB: null,
       },
       routeGraph: []
     };
