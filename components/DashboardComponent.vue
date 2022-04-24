@@ -1,11 +1,11 @@
 <template>
-    <graph-component></graph-component>
+    <graph-index-component></graph-index-component>
 </template>
 
 <script>
 module.exports = {
     components: {
-        'graph-component': httpVueLoader('./GraphComponent.vue')
+        'graph-index-component': httpVueLoader('./Graph/GraphIndexComponent.vue')
     }
 }
 </script>
