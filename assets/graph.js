@@ -87,6 +87,8 @@ class Graph {
             currVertex = this.vertexWithMinDistance(distances, visited);
         }
 
+        console.log(distances, parents);
+
         return this.getShortDistance(init, parents, distances);
     }
 

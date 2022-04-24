@@ -73,8 +73,8 @@ module.exports = {
         value: null,
       },
       searchForm: {
-        edgeA: null,
-        edgeB: null,
+        edgeA: 'X1',
+        edgeB: 'KL',
       },
       routeGraph: []
     };
@@ -83,65 +83,65 @@ module.exports = {
   mounted() {
     this.graph = new Graph(false);
 
-    this.graph.addNode("H9");
-    this.graph.addNode("RG");
-    this.graph.addNode("JT");
-    this.graph.addNode("KL");
     this.graph.addNode("R4");
-    this.graph.addNode("F7");
+    this.graph.addNode("KL");
+    this.graph.addNode("JT");
+    this.graph.addNode("RG");
+    this.graph.addNode("H9");
 
+    this.graph.addNode("F7");
     this.graph.addNode("X2");
     this.graph.addNode("A4");
     this.graph.addNode("Y6");
     this.graph.addNode("A2");
+
     this.graph.addNode("O10");
     this.graph.addNode("O9");
+    this.graph.addNode("F4");
+    this.graph.addNode("H5");
+    this.graph.addNode("H3");
 
     this.graph.addNode("R9");
-    this.graph.addNode("X1");
-    this.graph.addNode("E4");
-    this.graph.addNode("T5");
-    this.graph.addNode("T6");
     this.graph.addNode("R5");
-
     this.graph.addNode("R10");
     this.graph.addNode("LL");
     this.graph.addNode("U8");
+
     this.graph.addNode("D4");
     this.graph.addNode("U7");
+    this.graph.addNode("T5");
+    this.graph.addNode("T6");
+    this.graph.addNode("E4");
+    this.graph.addNode("X1");
 
-    this.graph.addNode("F4");
-    this.graph.addNode("H3");
-    this.graph.addNode("H5");
-
-    this.graph.addEdge("E4", "X1", 6);
-    this.graph.addEdge("T6", "T5", 4);
-    this.graph.addEdge("T5", "R5", 4);
-    this.graph.addEdge("R5", "R9", 5);
-    this.graph.addEdge("R5", "R10", 5);
-    this.graph.addEdge("R10", "LL", 5);
-    this.graph.addEdge("LL", "U8", 6);
-    this.graph.addEdge("U8", "R5", 3);
-    this.graph.addEdge("U8", "D4", 5);
-    this.graph.addEdge("D4", "U7", 3);
-
-    this.graph.addEdge("R9", "A2", 6);
+    this.graph.addEdge("R4", "KL", 5);
+    this.graph.addEdge("KL", "JT", 6);
+    this.graph.addEdge("JT", "RG", 5);
+    this.graph.addEdge("RG", "H9", 4);
+    this.graph.addEdge("H9", "F7", 5);
+    this.graph.addEdge("F7", "X2", 9);
+    this.graph.addEdge("X2", "A4", 8);
+    this.graph.addEdge("A4", "Y6", 8);
+    this.graph.addEdge("A4", "A2", 7);
     this.graph.addEdge("A2", "O10", 7);
+    this.graph.addEdge("A2", "O9", 8);
     this.graph.addEdge("O10", "O9", 7);
-    this.graph.addEdge("O9", "A2", 8);
     this.graph.addEdge("O9", "F4", 7);
     this.graph.addEdge("F4", "H5", 6);
     this.graph.addEdge("F4", "H3", 4);
-    this.graph.addEdge("A2", "A4", 7);
-    this.graph.addEdge("A4", "Y6", 8);
-    this.graph.addEdge("A4", "X2", 8);
-
-    this.graph.addEdge("X2", "F7", 9);
-    this.graph.addEdge("F7", "H9", 5);
-    this.graph.addEdge("H9", "RG", 4);
-    this.graph.addEdge("RG", "JT", 5);
-    this.graph.addEdge("KL", "JT", 6);
-    this.graph.addEdge("KL", "R4", 5);
+    this.graph.addEdge("A2", "R9", 6);
+    this.graph.addEdge("R9", "R5", 5);
+    this.graph.addEdge("R5", "R10", 5);
+    this.graph.addEdge("R5", "U8", 3);
+    this.graph.addEdge("R5", "T5", 4);
+    this.graph.addEdge("R10", "LL", 5);
+    this.graph.addEdge("U8", "LL", 6);
+    this.graph.addEdge("U8", "D4", 5);
+    this.graph.addEdge("D4", "U7", 3);
+    this.graph.addEdge("T5", "T6", 4);
+    this.graph.addEdge("R9", "X1", 6);
+    this.graph.addEdge("X1", "T5", 7);
+    this.graph.addEdge("X1", "E4", 6);
 
     this.graph = Object.assign(
         Object.create(Object.getPrototypeOf(this.graph)),
